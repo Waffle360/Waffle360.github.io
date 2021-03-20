@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Waffle 360</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="skeleton.css">
+  <link rel="stylesheet" href="waffle.css">
+  <script src="https://kit.fontawesome.com/199fcdd7fd.js" crossorigin="anonymous"></script>  
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <!-- mobile menu -->
+      <div class="overlay">
+	  <div class="container">
+	  	<div class="row">
+	  		<a href="#"><img class="menu-close" src="close-icon.png"></a>
+	  	</div>
+	  	<div class="row">
+	  		<ul class="overlay-links">
+            <li>
+              <a href="index.html" style="font-family: 'Montserrat Alternates', sans-serif;">Home</a>
+            </li>
+              <li>
+              <a href="" target="_blank" style="font-family: 'Montserrat Alternates', sans-serif;">Merch</a>
+            </li>
+              <li>
+              <a href="#" style="font-family: 'Montserrat Alternates', sans-serif;">Contact</a>
+            </li>
+          </ul>
+  		</div>
+	  </div>
+  </div>
+    
+    <!-- main menu -->
+  <div class="container">
+    <div class="row top">
+      <div class="six columns logo">
+          <a><img src="oie_OQPPGCPqbq8F.jpg" class="notvine-logo"></a>
+          <!--<a class="burger burger-2"><img id="burger" src="hamburger.png"></a>-->
+      </div>
+       <div class="six columns nav">
+           <a class="burger burger-1"><img id="burger" src="hamburger.png"></a>
+          <ul class="main-nav">
+          <li>
+              <a href="index.html" style="font-family: 'Montserrat Alternates', sans-serif;">Home</a>
+            </li>
+              <li>
+              <a href="" target="_blank" style="font-family: 'Montserrat Alternates', sans-serif;">Store</a>
+            </li>
+            <li>
+              <a href="#" style="font-family: 'Montserrat Alternates', sans-serif;">Contact</a>
+            </li>
+            <li>
+                <a href="login.html" style="font-family: 'Montserrat Alternates', sans-serif;">Go to studio</a>
+            </li>
+            
+          </ul>
+           
+       </div>
+    </div>
+  </div>
+    
+  <div class="container">
+      <div class="row title">
+          <div class="twelve columns up">
+            <h1>Revoultionizing IOT</h1>
+            <h5>Use HTML5 to develop and host your maker project</h5>
+          <div class="row">
+            <div class="twelve columns">
+              <button class="start-button" onclick="location.href = 'login.html';">Try it now</button>
+            </div>
+          </div>
+      </div>
+  </div>
+    
+  <div class="container">
+      <div class="row pic">
+          <div class="twelve columns">
+            <img src="undraw_circuit_board_4c4d.svg" id="phone-pic">
+          </div>
+      
+      </div>
+  </div>
+<section class="contentcenter">
+    
+    <div class="container">
+        <h4>Lorem ipsum dolor sit amet.</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ipsa nesciunt incidunt eum alias id, dolorem dolores nemo. Perspiciatis tempora facere ducimus et corrupti maxime rem quos! Ut, aspernatur accusamus.</p>
+    </div>   
+</section>    
+<br><br><br><br>
+    
+<footer>
+    <div class="container">
+        <div class="four columns center"> 
+        <p style="font-family: 'Nunito Sans', sans-serif;">© 2021, Waffle360 . All rights reserved. </p>
+      
+        <a><i class="fab fa-twitter"></i>  Follow us on twitter</a><br>
+        <a><i class="fab fa-github"></i>  Follow us on github</a><br>
+        <a><i class="fab fa-discord"></i>  Join our discord sever</a><br>
+        </div>
+     
+        <div class="four columns center"> 
+
+            <h4>Legal </h4> 
+            <a>Return policy </a><br>
+            <a href="faq.html"> Faq </a><br>
+            <a> Terms and conditions </a>
+        </div>
+        <div class="four columns center">  
+            <h4> Resources</h4>
+            <a>Public SDK's</a><br>
+            <a> Open hardware schematics </a>
+        </div>
+    </div>
+</footer>
+
+<script type="text/javascript">
+
+	$(".burger").click(function(){
+
+	$(".overlay").show();
+})
+
+	$(".menu-close").click(function(){
+
+	$(".overlay").hide();
+});
+    
+</script>
+<script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        } 
+      });
+    }
+    </script>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>

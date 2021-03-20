@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <!-- Basic Page Needs
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <meta charset="utf-8">
+        <title>Waffle 360</title>
+        <meta name="description" content="">
+        <meta name="author" content="">
+      
+        <!-- Mobile Specific Metas
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+      
+        <!-- FONT
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+      
+        <!-- CSS
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <link rel="stylesheet" href="normalize.css">
+        <link rel="stylesheet" href="skeleton.css">
+        <link rel="stylesheet" href="waffle.css">
+        <script src="https://kit.fontawesome.com/199fcdd7fd.js" crossorigin="anonymous"></script>  
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      
+        <!-- Favicon
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <link rel="icon" type="image/png" href="images/favicon.png">
+      
+      </head>
+<body>
+
+    <!-- mobile menu -->
+    <div class="overlay">
+        <div class="container">
+            <div class="row">
+                <a href="#"><img class="menu-close" src="close-icon.png"></a>
+            </div>
+            <div class="row">
+                <ul class="overlay-links">
+              <li>
+                <a href="index.html" style="font-family: 'Montserrat Alternates', sans-serif;">Home</a>
+              </li>
+                <li>
+                <a href="" target="_blank" style="font-family: 'Montserrat Alternates', sans-serif;">Merch</a>
+              </li>
+                <li>
+                <a href="#" style="font-family: 'Montserrat Alternates', sans-serif;">Contact</a>
+              </li>
+            </ul>
+            </div>
+        </div>
+    </div>
+      
+      <!-- main menu -->
+    <div class="container">
+      <div class="row top">
+        <div class="six columns logo">
+            <a><img src="oie_OQPPGCPqbq8F.jpg" class="notvine-logo"></a>
+            <!--<a class="burger burger-2"><img id="burger" src="hamburger.png"></a>-->
+        </div>
+         <div class="six columns nav">
+             <a class="burger burger-1"><img id="burger" src="hamburger.png"></a>
+            <ul class="main-nav">
+            <li>
+                <a href="index.html" style="font-family: 'Montserrat Alternates', sans-serif;">Home</a>
+              </li>
+                <li>
+                <a href="" target="_blank" style="font-family: 'Montserrat Alternates', sans-serif;">Store</a>
+              </li>
+              <li>
+                <a href="#" style="font-family: 'Montserrat Alternates', sans-serif;">Contact</a>
+              </li>
+              <li>
+                  <a href="login.html" style="font-family: 'Montserrat Alternates', sans-serif;">Go to studio</a>
+              </li>
+              
+            </ul>
+             
+         </div>
+      </div>
+    </div>
+    <br>
+    <section class="contentcenter" style="background-color: #48BBED;">
+    
+        <div class="container">
+            <img src="undraw_Questions_re_1fy7.svg"></img><br><br>
+            <h4>What is the return policy?</h4>
+            <p>Check out our return's policy page for more information</p><br><br>
+            <h4>What are the shipping options?</h4>
+            <p></p><br><br>
+            <h4>What are the international taxes, duties, etc. that I have to pay?</h4>
+            <p></p><br><br>
+            <h4>When will I receive my order?</h4>
+            <p></p><br><br>
+            <h4>What do I do if I never received my order?</h4>
+            <p></p><br><br>
+            <h4>What do I do if I received a defective order?</h4>
+            <p></p><br><br>
+            <h4>How do I make changes to an order I’ve already placed?</h4>
+            <p></p><br><br>
+            <h4>How is the product made? Where do the materials come from?</h4>
+            <p></p><br><br>
+            <h4>How do I contact your company if my question isn’t answered here?</h4>
+            <p></p><br><br>
+
+
+        </div>   
+    </section>    
+<br>
+<footer>
+    <div class="container">
+        <div class="four columns center"> 
+        <p style="font-family: 'Nunito Sans', sans-serif;">© 2021, Waffle360 . All rights reserved. </p>
+      
+        <a><i class="fab fa-twitter"></i>  Follow us on twitter</a><br>
+        <a><i class="fab fa-github"></i>  Follow us on github</a><br>
+        <a><i class="fab fa-discord"></i>  Join our discord sever</a><br>
+        </div>
+     
+        <div class="four columns center"> 
+
+            <h4>Legal </h4> 
+            <a>Return policy </a><br>
+            <a href="faq.html"> Faq </a><br>
+            <a> Terms and conditions </a>
+        </div>
+        <div class="four columns center">  
+            <h4> Resources</h4>
+            <a>Public SDK's</a><br>
+            <a> Open hardware schematics </a>
+        </div>
+    </div>
+</footer>
+<script type="text/javascript">
+
+	$(".burger").click(function(){
+
+	$(".overlay").show();
+})
+
+	$(".menu-close").click(function(){
+
+	$(".overlay").hide();
+});
+    
+</script>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+
+</body>
+</html>
