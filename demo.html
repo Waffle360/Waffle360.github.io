@@ -52,7 +52,7 @@ const serialLEDController = new SerialLEDController();
     messageForm.addEventListener('submit', event => {
       event.preventDefault();
       serialLEDController.write(event.target.firstElementChild.value);
-      getSerialMessage();
+     // getSerialMessage();
     });
 
     getSerialMessages.addEventListener('pointerdown', async () => {
