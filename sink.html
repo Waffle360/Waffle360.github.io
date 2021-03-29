@@ -4,50 +4,277 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Waffle launch studio</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
-    <link rel="icon" href="waffle.jpg"  sizes="16x16">
+    
+   
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
-
+  <link rel="icon" href="https://raw.githubusercontent.com/Launchstudio/Launchstudio.github.io/main/waffle.jpg"  sizes="16x16">
      
 
   </head>
   <body>
- <!-- <div id="preloder">
-		<div class="loader"><img src="loader.jpg" width="400px"></img></div>
-	</div>-->
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+input[type="file"] {
+    display: none;
+}
+.custom-file-upload{
+   
+    display: inline-block;
+    padding: 14px 28px;
+    cursor: pointer;
+    border-radius: 5px;
+   background-color: rgb(68, 67, 67);
+  color: rgb(67, 243, 190);
+ font-family: 'Josefin Sans', sans-serif;
+font-size: 16px;
+}
+#search{
+  margin-right: 200px;
+ border-radius:4px;padding: 11px 200px;background-color: rgb(68, 67, 67);
+  color: rgb(67, 243, 190);
+ font-family: 'Josefin Sans', sans-serif;
+font-size: 16px;
+}
+#search-button{
+  
+  border-radius:4px;padding: 11px 11px;background-color: rgb(68, 67, 67);
+  color: rgb(67, 243, 190);
+ font-family: 'Josefin Sans', sans-serif;
+font-size: 16px;
+}
+.custom-file-upload:hover{
+    
+    display: inline-block;
+    padding: 14px 28px;
+    cursor: pointer;
+    border-radius: 5px;
+background-color: rgb(67, 243, 190);
+ color:rgb(68, 67, 67);
+ font-family: 'Josefin Sans', sans-serif;
+font-size: 16px;
+}
+
+header {
+  height: 90px;
+  background-color: rgba(0, 0, 0, 0.808);
+  display: flex;
+ 
+  
+}
+
+#logocontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 16px;
+  }
+  
+#buttoncontainer {
+  flex: 1;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  padding-right: 30px;
+}
+
+#dashboard {
+  padding: 14px 28px;
+  border-radius: 5px;
+   background-color: rgb(68, 67, 67);
+  color: rgb(67, 243, 190);
+  cursor: pointer;
+ font-family: 'Josefin Sans', sans-serif;
+font-size: 16px;
+}
+
+#dashboard:hover{
+ padding: 14px 28px;
+ background-color: rgb(67, 243, 190);
+ color:rgb(68, 67, 67);
+ cursor: pointer;
+ border-radius: 5px;
+ font-family: 'Josefin Sans', sans-serif;
+ font-size: 16px;
+}
+#test {
+  padding: 14px 28px;
+  border-radius: 5px;
+  background-color: rgb(68, 67, 67);
+  color: rgb(67, 243, 190);
+  cursor: pointer;
+ font-family: 'Josefin Sans', sans-serif;
+ font-size: 16px;
+
+ display: inline-block;
+}
+
+#test:hover{
+ padding: 14px 28px;
+ background-color: rgb(67, 243, 190);
+ color:rgb(68, 67, 67);
+ cursor: pointer;
+ border-radius: 5px;
+ font-family: 'Josefin Sans', sans-serif;
+ font-size: 16px;
+
+ display: inline-block;
+    
+}
+#run {
+   padding: 14px 28px;
+  border-radius: 5px;
+   background-color: rgb(68, 67, 67);
+  color: rgb(67, 243, 190);
+  cursor: pointer;
+ font-family: 'Josefin Sans', sans-serif;
+font-size: 16px;
+}
+
+#run:hover{
+  padding: 14px 28px;
+  background-color: rgb(67, 243, 190);
+ color:rgb(68, 67, 67);
+ cursor: pointer;
+ border-radius: 5px;
+ font-family: 'Josefin Sans', sans-serif;
+ font-size: 16px;
+}
+#fileadd {
+ padding: 14px 28px;
+  border-radius: 5px;
+   background-color: rgb(68, 67, 67);
+  color: rgb(67, 243, 190);
+  cursor: pointer;
+ font-family: 'Josefin Sans', sans-serif;
+ font-size: 16px;
+}
+
+#fileadd:hover{
+padding: 14px 28px;
+  background-color: rgb(67, 243, 190);
+ color:rgb(68, 67, 67);
+ cursor: pointer;
+ border-radius: 5px;
+ font-family: 'Josefin Sans', sans-serif;
+ font-size: 16px;
+}
+
+.iconify{
+    font-size: 40px; 
+  }
+  main {
+    display: flex;
+    flex: 1;
+    position: relative;
+  }
+  
+  
+  
+#editor {
+    flex: 1;
+  }
+iframe{
+flex:1;
+background-color: rgb(255, 255, 255);
+
+}
+#files{
+padding-top: 10px;
+width: 15%;
+background-color: rgb(255, 255, 255);
+text-align: center;
+font-family: 'Josefin Sans', sans-serif;
+font-size: 28 px; 
+
+}
+p{
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+input, button {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+}
+
+
+</style>
+
 
 
     <header>
-         
+
+
+  
         <div id="logocontainer">
          
         </div>
         
      
           <div id="buttoncontainer">
-   <button onclick="buttonclick()" id="run"><i class="fas fa-rocket "></i> RUN</button>
-        <button onclick="buttonclick68()" id="dashboard" ><i class="fas fa-external-link-alt"></i> New tab</button>
+            
+        <button onclick="buttonclick68()" id="dashboard" ><i class="fas fa-external-link-alt"></i>  Run </button>
          <button id="test"><i class="fas fa-file-download"></i> Save </button>
         <label for="file-upload" class="custom-file-upload">
 <i class="fas fa-upload "></i> Upload
 </label>
 <input id="file-upload" type="file" accept=".txt" />
-<button id="dashboard"onclick="window.location.href='setting.html';"><i class="fas fa-cogs"></i> Settings</button>
-        <button onclick="window.location.href='https://github.com/Launchstudio/Launchstudio.github.io/tree/main';" id="dashboard"><i class="fab fa-github-square "></i> Github</button>
-  
-	 
-
+<input placeholder="   search" id="search" type="text"> <button onclick="search()" id="search-button"><i class="fas fa-search"></i></button></input
         </div>  
-        
+          
+
 
 
       </header>
       <main>
         
-<div id="editor" >&lt;!DOCTYPE html&gt;&#10;&lt;html&gt;&#10;&lt;head&gt;&#10;  &lt;title&gt;Mylaunch&lt;/title&gt;&#10;&lt;/head&gt;&#10;&lt;body&gt;&#10;&lt;script&gt;&#10;&#10;&#10;&#10;&#10;&#10;&lt;/script&gt;&#10;&lt;/html&gt; 
+<div id="editor" >&#x3C;!--Sample file--&#x3E;
+&#x3C;!DOCTYPE html&#x3E;
+&#x3C;html lang=&#x22;en&#x22;&#x3E;
+&#x3C;head&#x3E;
+&#x3C;title&#x3E;Page Title&#x3C;/title&#x3E; &#x3C;!--Change your page title --&#x3E;
+&#x3C;meta charset=&#x22;UTF-8&#x22;&#x3E;
+&#x3C;meta name=&#x22;viewport&#x22; content=&#x22;width=device-width, initial-scale=1&#x22;&#x3E;
+
+
+&#x3C;style&#x3E;
+/* write your style */
+
+
+
+&#x3C;/style&#x3E;
+&#x3C;/head&#x3E;
+&#x3C;body&#x3E;
+
+
+&#x3C;script&#x3E;
+// write your javascript functions
+
+
+
+&#x3C;/script&#x3E;
+&#x3C;script src=&#x22;https://waffle360.github.io/simplify.js&#x22;&#x3E;   // don&#x27;t delete this waffle won&#x27;t work then &#x3C;/script&#x3E;
+&#x3C;script src=&#x22;https://waffle360.github.io/APIreference.js&#x22;&#x3E;// don&#x27;t delete this waffle won&#x27;t work then&#x3C;/script&#x3E;
+&#x3C;/body&#x3E;
+&#x3C;/html&#x3E;
+
+
+
 </div>
         
-        <iframe id="iframe"></iframe>
+        
       
       </main>
       
@@ -56,8 +283,107 @@
         type="text/javascript"
         charset="utf-8"
       ></script>
-      
-    <script src="script.js"></script>
-   
+
+
+
+<script>var url = null
+const editor = ace.edit('editor')
+document.getElementById('editor').style.fontSize='16px';
+editor.setTheme("ace/theme/monokai")
+
+editor.session.setMode("ace/mode/html");
+ 
+editor.setShowPrintMargin(false);
+editor.renderer.setShowGutter(true);
+editor.session.setUseWorker(false)
+function createUrl(html) {
+  var blob = new Blob([html], { type: 'text/html' })
+  return URL.createObjectURL(blob)
+}
+
+
+function removeUrl(url) {
+  URL.revokeObjectURL(url)
+}
+function getIframe() {
+  var iframe = document.getElementById('iframe')
+  return iframe
+}
+
+function setIframeUrl(url) {
+  var iframe = getIframe()
+  iframe.src = url
+}
+
+function getEditorCode() {
+  return editor.getValue()
+}
+
+function buttonclick() {
+  var code = getEditorCode()
+  removeUrl(url)
+  url = createUrl(code)
+  setIframeUrl(url)
+  
+}
+// Get the modal
+function buttonclick68() {
+  var code = getEditorCode()
+  removeUrl(url)
+  url = createUrl(code)
+  window.open(url);
+  
+}
+function download_txt() {
+  var save = prompt("Save file as", "Waffle");
+  var textToSave = getEditorCode() ;
+  var hiddenElement = document.createElement('a');
+  hiddenElement.href = 'data:attachment/text,' + encodeURI(textToSave);
+  hiddenElement.target = '_blank';
+  hiddenElement.download = save + ".waffle";
+  hiddenElement.click();
+}
+
+document.getElementById('test').addEventListener('click', download_txt);
+
+
+function buttonclick3() {
+editor.setTheme("ace/theme/monokai") 
+}
+function buttonclick4() {
+document.getElementById('editor').style.fontSize='12px';
+}
+function buttonclick5() {
+document.getElementById('editor').style.fontSize='16px';
+}
+function buttonclick6() {
+document.getElementById('editor').style.fontSize='18px';
+}
+function buttonclick7() {
+document.getElementById('editor').style.fontSize='21px';
+}
+document.getElementById('file-upload') 
+            .addEventListener('change', function() { 
+              
+            var fr=new FileReader(); 
+            fr.onload=function(){ 
+                document.getElementById('output') 
+                editor.setValue(fr.result); 
+            } 
+              
+            fr.readAsText(this.files[0]); 
+}) 
+function search(){
+  var search = document.getElementById('search');
+  var find = search.value ; 
+  if(editor.find(find)){
+    
+  }
+  else{
+    alert('no such keyword in your file  as : ' + find);
+  }
+  
+}
+</script>
   </body>
 </html>
