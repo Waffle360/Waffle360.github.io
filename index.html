@@ -91,12 +91,23 @@
             <h5>Use HTML5 to develop and program your hardware</h5>
           <div class="row">
             <div class="twelve columns">
-              <button class="start-button" onclick="location.href = 'demo.html';">Try it now</button>
+              <button class="start-button" id="link">Try it now</button>
             </div>
           </div>
       </div>
   </div>
     
+	  
+	  
+	  
+	  <div class="container">
+      <div id="popup"><iframe id="popupiframe"></iframe></div>
+<div id="popupdarkbg"></div>
+    </div> 
+	  
+	  
+	  
+	  
   <div class="container">
       <div class="row pic">
           <div class="twelve columns">
@@ -110,15 +121,7 @@
 	    <h5> Embed this code at the bottom of your &#x3C;body&#x3E; tag </h5>
 	 <div id="editor">
 &#x3C;script src=&#x22;https://waffle360.github.io/publicsdk.js&#x22;&#x3E;&#x3C;/script&#x3E;</div>
-	<script>
-	const editor = ace.edit('editor')
-document.getElementById('editor').style.fontSize='16px';
-editor.setTheme("ace/theme/monokai")
-editor.setReadOnly(true);
-editor.session.setMode("ace/mode/html");
-editor.setShowPrintMargin(false);
-editor.renderer.setShowGutter(true);
-		editor.session.setUseWorker(false);</script>
+	
 </section> 
 <br><br><br><br>
     
@@ -146,13 +149,26 @@ editor.renderer.setShowGutter(true);
         </div>
     </div>
 </footer>
-<script
-        src="//ajaxorg.github.io/ace-builds/src-min-noconflict/ace.js"
-        type="text/javascript"
-        charset="utf-8"
-      >
+<script>document.getElementById("link").onclick = function(e) {
+  e.preventDefault();
+  document.getElementById("popupdarkbg").style.display = "block";
+  document.getElementById("popup").style.display = "block";
+  document.getElementById('popupiframe').src ="https://waffle360.github.io/sink.html";
+  document.getElementById('popupdarkbg').onclick = function() {
+      document.getElementById("popup").style.display = "none";
+      document.getElementById("popupdarkbg").style.display = "none";
+  };
+  return false;
+}
 
-</script>
+window.onkeydown = function(e) {
+    if (e.keyCode == 27) {
+      document.getElementById("popup").style.display = "none";
+      document.getElementById("popupdarkbg").style.display = "none";
+      e.preventDefault();
+      return;
+    }
+}</script>
 <script type="text/javascript">
 
 	$(".burger").click(function(){
