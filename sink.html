@@ -209,7 +209,8 @@ input, button {
         <label for="file-upload" class="custom-file-upload">
 <i class="fas fa-upload "></i> Upload
 </label>
-<input id="file-upload" type="file" accept=".txt" />
+<input type="file" onchange="readFile(this)"/>
+
 <button id="search-up-button" onclick="upsearch()" hidden></button>
 <button id="search-down-button" onclick="downsearch()" hidden></button>
 <input placeholder="   search" id="search" type="text"> <button onclick="search()" id="search-button"><i class="fas fa-search"></i></button></input>
@@ -320,7 +321,7 @@ function download_txt() {
   var hiddenElement = document.createElement('a');
   hiddenElement.href = 'data:attachment/text,' + encodeURI(textToSave);
   hiddenElement.target = '_blank';
-  hiddenElement.download = save + ".waffle";
+  hiddenElement.download = save + ".wafer";
   hiddenElement.click();
 }
 
@@ -342,17 +343,22 @@ document.getElementById('editor').style.fontSize='18px';
 function buttonclick7() {
 document.getElementById('editor').style.fontSize='21px';
 }
-document.getElementById('file-upload') 
-            .addEventListener('change', function() { 
-              
-            var fr=new FileReader(); 
-            fr.onload=function(){ 
-                document.getElementById('output') 
-                editor.setValue(fr.result); 
-            } 
-              
-            fr.readAsText(this.files[0]); 
-}) 
+function readFile(input) {
+  let file = input.files[0];
+
+  let reader = new FileReader();
+
+  reader.readAsText(file);
+
+  reader.onload = function() {
+    console.log(reader.result);
+  };
+
+  reader.onerror = function() {
+    console.log(reader.error);
+  };
+
+}
 function search(){
   var search = document.getElementById('search');
   var find = search.value ; 
